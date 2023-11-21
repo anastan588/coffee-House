@@ -3,10 +3,284 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./../styles/menu.scss" />
-    <title>Document</title>
+    <link
+      rel="shortcut icon"
+      href="./../favicon/favicon.ico"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="./../styles/menu.css" />
+    <title>Menu</title>
   </head>
-  <body>
-    <script src="./../scripts/index.js"></script>
+  <body class="body">
+    <div class="main_container">
+      <header class="header">
+        <div class="header_block container inner_container">
+          <a href="./../../index.html" class="nav_logo_link">
+            <img src="./../../assets/icons/logo.svg" alt="logo" class="logo" />
+          </a>
+          <nav class="navigation">
+            <ul class="navigation_list">
+              <li class="nav_item">
+                <a href="#coffee" class="nav_item_link"
+                  ><p class="nav_text">Favorite coffee</p>
+                  <img
+                    src="./../../assets/icons/coffee-cup.svg"
+                    alt="cup"
+                    class="nav_img"
+                  />
+                </a>
+                <div class="nav_underline"></div>
+              </li>
+              <li class="nav_item">
+                <a href="#about" class="nav_item_link">
+                  <p class="nav_text">About</p>
+                  <img
+                    src="./../../assets/icons/coffee-cup.svg"
+                    alt="cup"
+                    class="nav_img"
+                /></a>
+                <div class="nav_underline"></div>
+              </li>
+              <li class="nav_item">
+                <a href="#mobile" class="nav_item_link">
+                  <p class="nav_text">Mobile app</p>
+                  <img
+                    src="./../../assets/icons/coffee-cup.svg"
+                    alt="cup"
+                    class="nav_img"
+                /></a>
+                <div class="nav_underline"></div>
+              </li>
+              <li class="nav_item">
+                <a href="#contacts" class="nav_item_link"
+                  ><p class="nav_text">Contact us</p>
+                  <img
+                    src="./../../assets/icons/coffee-cup.svg"
+                    alt="cup"
+                    class="nav_img"
+                /></a>
+                <div class="nav_underline"></div>
+              </li>
+            </ul>
+          </nav>
+          <a class="menu" href="./../../index.html">
+            <p class="menu_title">Menu</p>
+            <img
+              src="./../../assets/icons/coffee-cup.svg"
+              alt="cup"
+              class="menu_img"
+            />
+          </a>
+        </div>
+      </header>
+      <main class="main">
+        <section class="menu_block container inner_container">
+          <h2 class="menu_block_title">
+            Behind each of our cups hides an
+            <span class="span">amazing surprise</span>
+          </h2>
+          <div class="menu_block_buttons">
+            <div class="menu_button active_button">
+              <div class="menu_button_img_container">
+                <img
+                  class="menu_button_img"
+                  src="./../icons/cup.svg"
+                  alt="cup"
+                />
+              </div>
+              <p class="menu_button_text">Coffee</p>
+            </div>
+            <div class="menu_button">
+              <div class="menu_button_img_container">
+                <img
+                  class="menu_button_img"
+                  src="./../icons/pot.svg"
+                  alt="pot"
+                />
+              </div>
+              <p class="menu_button_text">Pot</p>
+            </div>
+            <div class="menu_button">
+              <div class="menu_button_img_container">
+                <img
+                  class="menu_button_img"
+                  src="./../icons/dessert.svg"
+                  alt="dessert"
+                />
+              </div>
+              <p class="menu_button_text">Dessert</p>
+            </div>
+          </div>
+          <div class="menu_items_block">
+            <div class="menu_items_block_coffee">
+              <div class="menu_item">
+                <div class="menu_item_img item_coffee_1"></div>
+                <div class="menu_item_content">
+                  <div class="menu_item_text">
+                    <h3 class="menu_item_title">Irish coffee</h3>
+                    <p class="menu_item_description">
+                      Fragrant black coffee with Jameson Irish whiskey and
+                      whipped milk
+                    </p>
+                  </div>
+                  <p class="menu_item_price">$7.00</p>
+                </div>
+              </div>
+              <div class="menu_item">
+                <div class="menu_item_img item_coffee_2"></div>
+                <div class="menu_item_content">
+                  <div class="menu_item_text">
+                    <h3 class="menu_item_title">Kahlua coffee</h3>
+                    <p class="menu_item_description">
+                      Classic coffee with milk and Kahlua liqueur under a cap of
+                      frothed milk
+                    </p>
+                  </div>
+                  <p class="menu_item_price">$7.00</p>
+                </div>
+              </div>
+              <div class="menu_item">
+                <div class="menu_item_img item_coffee_3"></div>
+                <div class="menu_item_content">
+                  <div class="menu_item_text">
+                    <h3 class="menu_item_title">Honey raf</h3>
+                    <p class="menu_item_description">
+                      Espresso with frothed milk, cream and aromatic honey
+                    </p>
+                  </div>
+                  <p class="menu_item_price">$5.50</p>
+                </div>
+              </div>
+              <div class="menu_item">
+                <div class="menu_item_img item_coffee_4"></div>
+                <div class="menu_item_content">
+                  <div class="menu_item_text">
+                    <h3 class="menu_item_title">Ice cappuccino</h3>
+                    <p class="menu_item_description">
+                      Cappuccino with soft thick foam in summer version with ice
+                    </p>
+                  </div>
+
+                  <p class="menu_item_price">$5.00</p>
+                </div>
+              </div>
+              <div class="menu_item">
+                <div class="menu_item_img item_coffee_5"></div>
+                <div class="menu_item_content">
+                  <div class="menu_item_text">
+                    <h3 class="menu_item_title">Espresso</h3>
+                    <p class="menu_item_description">Classic black coffee</p>
+                  </div>
+                  <p class="menu_item_price">$4.50</p>
+                </div>
+              </div>
+              <div class="menu_item">
+                <div class="menu_item_img item_coffee_6"></div>
+                <div class="menu_item_content">
+                  <div class="menu_item_text">
+                    <h3 class="menu_item_title">Latte</h3>
+                    <p class="menu_item_description">
+                      Espresso coffee with the addition of steamed milk and
+                      dense milk foam
+                    </p>
+                  </div>
+                  <p class="menu_item_price">$5.50</p>
+                </div>
+              </div>
+              <div class="menu_item">
+                <div class="menu_item_img item_coffee_7"></div>
+                <div class="menu_item_content">
+                  <div class="menu_item_text">
+                    <h3 class="menu_item_title">Latte macchiato</h3>
+                    <p class="menu_item_description">
+                      Espresso with frothed milk and chocolate
+                    </p>
+                  </div>
+
+                  <p class="menu_item_price">$5.50</p>
+                </div>
+              </div>
+              <div class="menu_item">
+                <div class="menu_item_img item_coffee_8"></div>
+                <div class="menu_item_content">
+                  <div class="menu_item_text">
+                    <h3 class="menu_item_title">Coffee with cognac</h3>
+                    <p class="menu_item_description">
+                      Fragrant black coffee with cognac and whipped cream
+                    </p>
+                  </div>
+                  <p class="menu_item_price">$6.50</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer id="contacts" class="footer">
+        <div class="container inner_container">
+          <div class="footer_block container">
+            <div class="footer_media_block">
+              <h2 class="footer_title">
+                Sip, Savor, Smile.
+                <span class="span">It’s coffee time!</span>
+              </h2>
+              <div class="footer_media">
+                <div class="media_item">
+                  <div class="media_img media_twitter"></div>
+                </div>
+                <div class="media_item">
+                  <div class="media_img media_instagram"></div>
+                </div>
+                <div class="media_item">
+                  <div class="media_img media_facebook"></div>
+                </div>
+              </div>
+            </div>
+            <div class="footer_contacts_block">
+              <h3 class="contacts_title">Contact us</h3>
+              <ul class="contacts_list">
+                <li class="contact_item">
+                  <a
+                    href="https://maps.app.goo.gl/5wnjD41o9we16eei6"
+                    target="_blank"
+                    class="contact_link"
+                    ><img
+                      src="./../../assets//icons/pin-alt.svg"
+                      alt="place"
+                      class="contact_img"
+                    />
+                    <p class="contact_text">8558 Green Rd., LA</p></a
+                  >
+                  <div class="contact_border"></div>
+                </li>
+                <li class="contact_item">
+                  <a href="tel:16035550123" class="contact_link" target="_blank"
+                    ><img
+                      src="./../../assets/icons/phone.svg"
+                      alt="phone"
+                      class="contact_img"
+                    />
+                    <p class="contact_text">+1 (603) 555-0123</p></a
+                  >
+                  <div class="contact_border"></div>
+                </li>
+                <li class="contact_item">
+                  <a href="tel:16035550123" class="contact_link" target="_blank"
+                    ><img
+                      src="./../../assets/icons/clock.svg"
+                      alt="time"
+                      class="contact_img"
+                    />
+                    <p class="contact_text">Mon-Sat: 9:00 AM – 23:00 PM</p></a
+                  >
+                  <div class="contact_border"></div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="./assets/scripts/index.js"></script>
   </body>
 </html>
