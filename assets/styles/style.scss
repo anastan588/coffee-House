@@ -108,7 +108,6 @@ h6 {
 /*Normalize*/
 
 /*mixins*/
-// $font_toonish: 'Toonish', sans-serif;
 $background_color_light: #e1d4c9;
 $background_color_light_grey: #c1b6ad;
 $background_color_dark: #665f55;
@@ -221,7 +220,7 @@ $text_color_dark: #403f3d;
 }
 
 .enjoy_block {
-  background-image: url(/assets/pictures/img-hero.jpg);
+  background-image: url(./../../assets/pictures/img-hero.jpg);
   background-position: 50% 50%;
   padding: 100px;
   border-radius: 40px;
@@ -309,23 +308,23 @@ $text_color_dark: #403f3d;
 }
 
 .arrow_left {
-  background-image: url(/assets/icons/arrow-left.svg);
+  background-image: url(./../../assets/icons/arrow-left.svg);
   transition: all 0.5s ease-in;
 }
 .arrow_right {
-  background-image: url(/assets/icons/arrow-right.svg);
+  background-image: url(./../../assets/icons/arrow-right.svg);
   transition: all 0.5s ease-in;
 }
 
 .arrow_left:hover {
   background-color: $background_color_dark;
   border-color: $border_color_dark;
-  background-image: url(/assets/icons/arrow-left-light.png);
+  background-image: url(./../../assets/icons/arrow-left-light.png);
 }
 .arrow_right:hover {
   background-color: $background_color_dark;
   border-color: $border_color_dark;
-  background-image: url(/assets/icons/arrow-right-light.png);
+  background-image: url(./../../assets/icons/arrow-right-light.png);
 }
 .img_arrow {
 }
@@ -343,6 +342,10 @@ $text_color_dark: #403f3d;
   flex-direction: column;
   max-width: 480px;
   gap: 20px;
+}
+
+.display_none_slide {
+  display: none;
 }
 .slide_img {
   max-width: 480px;
@@ -408,15 +411,14 @@ $text_color_dark: #403f3d;
   font-weight: 600;
   line-height: 125%;
   color: $text_color_dark;
-  letter-spacing: 0.46px;
+  letter-spacing: 0.467px;
 }
 .about_title_span {
 }
 .about_images_block {
-  width: 100%;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: 1fr 0.45fr 1fr;
+  grid-template-rows: 1fr 0.28fr 1fr;
   column-gap: 40px;
   row-gap: 40px;
 }
@@ -424,30 +426,32 @@ $text_color_dark: #403f3d;
   padding-top: 215px;
   padding-bottom: 215px;
   background-position: 50% 50%;
-  background-size: 103% auto;
+  background-size: 108% auto;
   border-radius: 20px;
   cursor: pointer;
   transition: all 1s ease-in;
 }
 .about_img_container:hover {
-  background-size: 97% auto;
+  background-size: 100% auto;
 }
 
 .about_img_1 {
   grid-row-start: 1;
   grid-row-end: 3;
-  background-image: url(/assets/pictures/about-1.jpg);
+  background-image: url(./../../assets/pictures/about-1.jpg);
+  background-position: 50% 50%;
 }
 .about_img_2 {
-  background-image: url(/assets/pictures/about-3.jpg);
+  background-image: url(./../../assets/pictures/about-3.jpg);
 }
 .about_img_3 {
   grid-row-start: 2;
   grid-row-end: 4;
-  background-image: url(/assets/pictures/about-4.jpg);
+  background-image: url(./../../assets/pictures/about-4.jpg);
 }
 .about_img_4 {
-  background-image: url(/assets/pictures/about-2.jpg);
+  background-image: url(./../../assets/pictures/about-2.jpg);
+  padding-bottom: 0px;
 }
 .mobile {
 }
@@ -468,6 +472,7 @@ $text_color_dark: #403f3d;
   font-size: 60px;
   font-weight: 600;
   line-height: 125%;
+  letter-spacing: 0.85px;
   color: $text_color_dark;
 }
 .mobile_title_span {
@@ -481,8 +486,8 @@ $text_color_dark: #403f3d;
   gap: 20px;
 }
 .mobile_button {
-  max-width: 200px;
-  padding: 12px 20px;
+  width: 200px;
+  padding: 12px 20px 12px 20px;
   display: flex;
   gap: 8px;
   border-radius: 100px;
@@ -502,18 +507,18 @@ $text_color_dark: #403f3d;
 }
 
 .apple {
-  background-image: url(/assets/icons/apple.svg);
+  background-image: url(./../../assets/icons/apple.svg);
   transition: all 0.5s ease-in;
 }
 .mobile_button:hover > .apple {
-  background-image: url(/assets/icons/apple-light.svg);
+  background-image: url(./../../assets/icons/apple-light.svg);
 }
 .android {
-  background-image: url(/assets/icons/android.svg);
+  background-image: url(./../../assets/icons/android.svg);
   transition: all 0.5s ease-in;
 }
 .mobile_button:hover > .android {
-  background-image: url(/assets/icons/android-light.svg);
+  background-image: url(./../../assets/icons/android-light.svg);
 }
 .mobile_button_context {
   font-weight: 600;
@@ -529,7 +534,6 @@ $text_color_dark: #403f3d;
   font-size: 10px;
   font-weight: 600;
   line-height: 140%;
-  // transition: all 0.5s ease-in;
 }
 .mobile_button:hover > .mobile_button_title {
   color: $text_color_light;
@@ -564,6 +568,7 @@ $text_color_dark: #403f3d;
   font-weight: 600;
   line-height: 125%;
   color: $text_color_light;
+  letter-spacing: 0.65px;
 }
 
 .footer_media {
@@ -571,7 +576,7 @@ $text_color_dark: #403f3d;
   gap: 12px;
 }
 .media_item {
-  padding: 18px;
+  padding: 17px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -591,29 +596,29 @@ $text_color_dark: #403f3d;
 }
 
 .media_twitter {
-  background-image: url(/assets/icons/twitter.svg);
+  background-image: url(./../../assets/icons/twitter.svg);
   transition: all 0.5s ease-in;
 }
 
 .media_item:hover .media_twitter {
-  background-image: url(/assets/icons/twitter-dark.svg);
+  background-image: url(./../../assets/icons/twitter-dark.svg);
 }
 .media_instagram {
-  background-image: url(/assets/icons/instagram.svg);
+  background-image: url(./../../assets/icons/instagram.svg);
   transition: all 0.5s ease-in;
 }
 
 .media_item:hover .media_instagram {
-  background-image: url(/assets/icons/instagram-dark.svg);
+  background-image: url(./../../assets/icons/instagram-dark.svg);
 }
 
 .media_facebook {
-  background-image: url(/assets/icons/facebook.svg);
+  background-image: url(./../../assets/icons/facebook.svg);
   transition: all 0.5s ease-in;
 }
 
 .media_item:hover .media_facebook {
-  background-image: url(/assets/icons/facebook-dark.svg);
+  background-image: url(./../../assets/icons/facebook-dark.svg);
 }
 .footer_contacts_block {
   display: flex;
@@ -658,4 +663,5 @@ $text_color_dark: #403f3d;
   line-height: 150%;
   color: $text_color_light;
   transition: all 0.5s ease;
+  letter-spacing: 0.25px;
 }
