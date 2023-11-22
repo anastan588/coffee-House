@@ -145,6 +145,10 @@ h6 {
   cursor: pointer;
 }
 
+.nav_logo_link:hover {
+  transform: scale(1.05);
+}
+
 .logo {
   max-height: 60px;
 }
@@ -158,7 +162,7 @@ h6 {
 .navigation_list {
   display: flex;
   align-items: center;
-  gap: 42px;
+  gap: 40px;
 }
 
 .nav_item {
@@ -216,7 +220,7 @@ h6 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 40px;
+  gap: 38.5px;
 }
 
 .menu_block_title {
@@ -226,6 +230,11 @@ h6 {
   line-height: 125%;
   color: #403f3d;
   text-align: center;
+  letter-spacing: 0.4px;
+}
+
+.header_span {
+  letter-spacing: 1.1px;
 }
 
 .menu_block_buttons {
@@ -280,17 +289,21 @@ h6 {
   line-height: 150%;
 }
 
-.menu_items_block {
+.menu_items_container {
   display: flex;
+  flex-direction: column;
 }
 
-.menu_items_block_coffee {
+.menu_items_block {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  row-gap: 40px;
+  row-gap: 38px;
   -moz-column-gap: 40px;
        column-gap: 40px;
+}
+
+.display_none_menu {
+  display: none;
 }
 
 .menu_item {
@@ -347,9 +360,57 @@ h6 {
   background-image: url(./../pictures/coffee-menu/coffee-8.jpg);
 }
 
+.item_tea_1 {
+  background-image: url(./../pictures/tea-menu/tea-1.png);
+}
+
+.item_tea_2 {
+  background-image: url(./../pictures/tea-menu/tea-2.png);
+}
+
+.item_tea_3 {
+  background-image: url(./../pictures/tea-menu/tea-3.png);
+}
+
+.item_tea_4 {
+  background-image: url(./../pictures/tea-menu/tea-4.png);
+}
+
+.item_dessert_1 {
+  background-image: url(./../pictures/dessert-menu/dessert-1.png);
+}
+
+.item_dessert_2 {
+  background-image: url(./../pictures/dessert-menu/dessert-2.png);
+}
+
+.item_dessert_3 {
+  background-image: url(./../pictures/dessert-menu/dessert-3.png);
+}
+
+.item_dessert_4 {
+  background-image: url(./../pictures/dessert-menu/dessert-4.png);
+}
+
+.item_dessert_5 {
+  background-image: url(./../pictures/dessert-menu/dessert-5.png);
+}
+
+.item_dessert_6 {
+  background-image: url(./../pictures/dessert-menu/dessert-6.png);
+}
+
+.item_dessert_7 {
+  background-image: url(./../pictures/dessert-menu/dessert-7.png);
+}
+
+.item_dessert_8 {
+  background-image: url(./../pictures/dessert-menu/dessert-8.png);
+}
+
 .menu_item_content {
   flex-grow: 1;
-  padding: 20px;
+  padding: 20px 20px 19px 20px;
   display: flex;
   flex-direction: column;
   gap: 12px;

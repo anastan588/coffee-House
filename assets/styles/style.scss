@@ -156,7 +156,12 @@ $text_color_dark: #403f3d;
   display: flex;
   align-items: center;
   cursor: pointer;
+  transition: all 0.5s ease;
 }
+.nav_logo_link:hover {
+  transform: scale(1.05);
+}
+
 .logo {
   max-height: 60px;
 }
@@ -204,6 +209,7 @@ $text_color_dark: #403f3d;
   gap: 8px;
   cursor: pointer;
   transition: all 0.5s ease-in;
+  color: $text_color_dark;
 }
 
 .menu:hover {
@@ -422,6 +428,22 @@ $text_color_dark: #403f3d;
   column-gap: 40px;
   row-gap: 40px;
 }
+
+@media (max-width: 1200px) {
+  .about_images_block {
+    grid-template-rows: 1fr 0.16fr 1fr;
+    column-gap: 30px;
+    row-gap: 30px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .about_images_block {
+    grid-template-rows: 1fr 0.08fr 1fr;
+    column-gap: 20px;
+    row-gap: 20px;
+  }
+}
 .about_img_container {
   padding-top: 215px;
   padding-bottom: 215px;
@@ -556,6 +578,20 @@ $text_color_dark: #403f3d;
   display: flex;
   gap: 100px;
   align-items: center;
+}
+
+@media (max-width: 1200px) {
+  .footer_block {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .footer_block {
+    flex-direction: column;
+    align-items: start;
+    gap: 40px;
+  }
 }
 .footer_media_block {
   display: flex;
