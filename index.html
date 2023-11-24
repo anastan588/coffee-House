@@ -13,64 +13,71 @@
   </head>
   <body class="body">
     <div class="main_container">
+      <div class="overlay"></div>
       <header class="header">
         <div class="header_block container inner_container">
           <a href="./index.html" class="nav_logo_link">
             <img src="./assets/icons/logo.svg" alt="logo" class="logo" />
           </a>
-          <nav class="navigation">
-            <ul class="navigation_list">
-              <li class="nav_item">
-                <a href="#coffee" class="nav_item_link"
-                  ><p class="nav_text">Favorite coffee</p>
-                  <img
-                    src="./assets/icons/coffee-cup.svg"
-                    alt="cup"
-                    class="nav_img"
-                  />
-                </a>
-                <div class="nav_underline"></div>
-              </li>
-              <li class="nav_item">
-                <a href="#about" class="nav_item_link">
-                  <p class="nav_text">About</p>
-                  <img
-                    src="./assets/icons/coffee-cup.svg"
-                    alt="cup"
-                    class="nav_img"
-                /></a>
-                <div class="nav_underline"></div>
-              </li>
-              <li class="nav_item">
-                <a href="#mobile" class="nav_item_link">
-                  <p class="nav_text">Mobile app</p>
-                  <img
-                    src="./assets/icons/coffee-cup.svg"
-                    alt="cup"
-                    class="nav_img"
-                /></a>
-                <div class="nav_underline"></div>
-              </li>
-              <li class="nav_item">
-                <a href="#contacts" class="nav_item_link"
-                  ><p class="nav_text">Contact us</p>
-                  <img
-                    src="./assets/icons/coffee-cup.svg"
-                    alt="cup"
-                    class="nav_img"
-                /></a>
-                <div class="nav_underline"></div>
-              </li>
-            </ul>
-          </nav>
-          <a class="menu" href="./assets/pages/menu.html">
-            <p class="menu_title">Menu</p>
-            <img
-              src="./assets/icons/coffee-cup.svg"
-              alt="cup"
-              class="menu_img"
-            />
-          </a>
+          <div class="burger">
+            <div class="burger_line"></div>
+            <div class="burger_line"></div>
+          </div>
+          <div class="menu_block_burger">
+            <nav class="navigation">
+              <ul class="navigation_list">
+                <li class="nav_item">
+                  <a href="#coffee" class="nav_item_link"
+                    ><p class="nav_text">Favorite coffee</p>
+                    <img
+                      src="./assets/icons/coffee-cup.svg"
+                      alt="cup"
+                      class="nav_img"
+                    />
+                  </a>
+                  <div class="nav_underline"></div>
+                </li>
+                <li class="nav_item">
+                  <a href="#about" class="nav_item_link">
+                    <p class="nav_text">About</p>
+                    <img
+                      src="./assets/icons/coffee-cup.svg"
+                      alt="cup"
+                      class="nav_img"
+                  /></a>
+                  <div class="nav_underline"></div>
+                </li>
+                <li class="nav_item">
+                  <a href="#mobile" class="nav_item_link">
+                    <p class="nav_text">Mobile app</p>
+                    <img
+                      src="./assets/icons/coffee-cup.svg"
+                      alt="cup"
+                      class="nav_img"
+                  /></a>
+                  <div class="nav_underline"></div>
+                </li>
+                <li class="nav_item">
+                  <a href="#contacts" class="nav_item_link"
+                    ><p class="nav_text">Contact us</p>
+                    <img
+                      src="./assets/icons/coffee-cup.svg"
+                      alt="cup"
+                      class="nav_img"
+                  /></a>
+                  <div class="nav_underline"></div>
+                </li>
+              </ul>
+            </nav>
+            <a class="menu" href="./assets/pages/menu.html">
+              <p class="menu_title">Menu</p>
+              <img
+                src="./assets/icons/coffee-cup.svg"
+                alt="cup"
+                class="menu_img"
+              />
+            </a>
+          </div>
         </div>
       </header>
       <main class="main">
@@ -88,10 +95,10 @@
                   lovers and those seeking a warm and inviting space to enjoy
                   their favorite beverage.
                 </p>
-                <a class="enjoy_button" href="./assets/pages/menu.html">
+                <a class="enjoy_button" href="/assets/pages/menu.html">
                   <p class="enjoy_button_text">Menu</p>
                   <img
-                    src="./assets/icons/coffee-cup.svg"
+                    src="/assets/icons/coffee-cup.svg"
                     alt="cup"
                     class="enjoy_button_img"
                   />
@@ -285,6 +292,6 @@
         </div>
       </footer>
     </div>
-    <script src="./assets/scripts/index.js"></script>
+    <script src="./assets/scripts/burger.js" type="module"></script>
   </body>
 </html>

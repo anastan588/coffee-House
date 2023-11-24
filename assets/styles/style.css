@@ -128,6 +128,17 @@ h6 {
   font-style: italic;
 }
 
+.overlay {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+  background-color: rgba(41, 41, 41, 0.4);
+}
+
 .header_block {
   width: 100%;
   display: flex;
@@ -137,6 +148,7 @@ h6 {
   padding-bottom: 21px;
   font-weight: 600;
   line-height: 150%;
+  position: relative;
 }
 
 .nav_logo_link {
@@ -154,6 +166,53 @@ h6 {
   max-height: 60px;
 }
 
+.burger {
+  display: none;
+  cursor: pointer;
+  padding: 18px 13px;
+  border: 1px solid #665f55;
+  flex-direction: column;
+  gap: 4.5px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.burger_line {
+  width: 16px;
+  height: 1.5px;
+  background-color: #403f3d;
+}
+
+@media (max-width: 768px) {
+  .burger {
+    display: flex;
+    transition: all 0.5s ease;
+  }
+  .burger:hover {
+    transform: scale(1.1);
+  }
+}
+.menu_block_burger {
+  display: flex;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+
+@media (max-width: 768px) {
+  .menu_block_burger {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    gap: 100px;
+    right: -100%;
+    top: 100%;
+    z-index: 3;
+    padding: 60px 40px;
+    width: 100%;
+    background-color: #e1d4c9;
+  }
+}
 .navigation {
   flex-grow: 1;
   display: flex;
@@ -166,6 +225,16 @@ h6 {
   gap: 42px;
 }
 
+@media (max-width: 768px) {
+  .navigation {
+    flex-direction: column;
+    align-items: center;
+  }
+  .navigation_list {
+    flex-direction: column;
+    gap: 60px;
+  }
+}
 .nav_item {
   cursor: pointer;
   transition: all 0.5s ease-in;
@@ -208,6 +277,13 @@ h6 {
   color: #403f3d;
 }
 
+@media (max-width: 768px) {
+  .menu {
+    justify-content: center;
+    height: 180px;
+    align-items: flex-start;
+  }
+}
 .menu:hover {
   border-bottom: 4px solid #403f3d;
 }
@@ -223,6 +299,13 @@ h6 {
   border-radius: 40px;
 }
 
+@media (max-width: 1000px) {
+  .enjoy_block {
+    background-image: url(./../../assets/pictures/img-hero.jpg);
+    background-position: 50% 50%;
+    padding: 100px 60px 100px 60px;
+  }
+}
 .enjoy_content_block {
   max-width: 530px;
   display: flex;
@@ -270,6 +353,11 @@ h6 {
   width: 24px;
 }
 
+@media (max-width: 1000px) {
+  .enjoy_button_img {
+    width: 24px;
+  }
+}
 .coffee_block {
   padding-top: 100px;
   padding-bottom: 100px;
@@ -451,6 +539,13 @@ h6 {
     row-gap: 20px;
   }
 }
+@media (max-width: 1000px) {
+  .about_images_block {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+}
 .about_img_container {
   padding-top: 215px;
   padding-bottom: 215px;
@@ -461,6 +556,14 @@ h6 {
   transition: all 1s ease-in;
 }
 
+@media (max-width: 1000px) {
+  .about_img_container {
+    padding-top: 295px;
+    padding-bottom: 295px;
+    background-position: 50% 50%;
+    background-size: 108% auto;
+  }
+}
 .about_img_container:hover {
   background-size: 100% auto;
 }
@@ -487,6 +590,24 @@ h6 {
   padding-bottom: 0px;
 }
 
+@media (max-width: 1000px) {
+  .about_img_1 {
+    background-position: 50% 50%;
+    order: 1;
+  }
+  .about_img_2 {
+    display: none;
+    order: 3;
+  }
+  .about_img_3 {
+    order: 2;
+  }
+  .about_img_4 {
+    padding-bottom: 344px;
+    order: 4;
+    display: none;
+  }
+}
 .mobile_block {
   padding-top: 100px;
   padding-bottom: 100px;
@@ -495,6 +616,14 @@ h6 {
   align-items: center;
 }
 
+@media (max-width: 1000px) {
+  .mobile_block {
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    align-items: start;
+  }
+}
 .mobile_description {
   display: flex;
   flex-direction: column;
@@ -502,6 +631,11 @@ h6 {
   max-width: 630px;
 }
 
+@media (max-width: 1000px) {
+  .mobile_description {
+    max-width: 688px;
+  }
+}
 .mobile_title {
   font-size: 60px;
   font-weight: 600;
@@ -582,6 +716,11 @@ h6 {
   color: #e1d4c9;
 }
 
+@media (max-width: 1000px) {
+  .mobile_img_block {
+    align-self: center;
+  }
+}
 .mobiles_img {
   max-width: 630px;
   width: 100%;
@@ -609,7 +748,12 @@ h6 {
   .footer_block {
     flex-direction: column;
     align-items: start;
-    gap: 40px;
+    gap: 100px;
+  }
+}
+@media (max-width: 1100px) {
+  .footer_block {
+    padding: 100px 60px 100px 60px;
   }
 }
 .footer_media_block {
