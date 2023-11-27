@@ -266,6 +266,7 @@ $text_color_dark: #403f3d;
   pointer-events: none;
   background-color: $background_color_dark;
   color: $text_color_light;
+  user-select: none;
 }
 .menu_button_img_container {
   width: 30px;
