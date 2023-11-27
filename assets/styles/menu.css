@@ -263,6 +263,9 @@ h6 {
   pointer-events: none;
   background-color: #665f55;
   color: #e1d4c9;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 
 .menu_button_img_container {
