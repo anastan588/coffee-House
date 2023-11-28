@@ -14,6 +14,8 @@
 *,
 *:before,
 *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -277,6 +279,7 @@ h6 {
   height: 4px;
   background-color: #403f3d;
   opacity: 0;
+  transition: all 0.5s ease;
 }
 
 .nav_item:hover > .nav_underline {
@@ -287,11 +290,6 @@ h6 {
   opacity: 0;
   transition: all 0.5s ease-in;
   width: 0px;
-}
-
-.nav_item:hover > .nav_item_link > .nav_img {
-  opacity: 1;
-  width: 20px;
 }
 
 .menu {
@@ -543,24 +541,21 @@ h6 {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: 1fr 0.28fr 1fr;
-  -moz-column-gap: 40px;
-       column-gap: 40px;
+  column-gap: 40px;
   row-gap: 40px;
 }
 
 @media (max-width: 1200px) {
   .about_images_block {
     grid-template-rows: 1fr 0.16fr 1fr;
-    -moz-column-gap: 30px;
-         column-gap: 30px;
+    column-gap: 30px;
     row-gap: 30px;
   }
 }
 @media (max-width: 1100px) {
   .about_images_block {
     grid-template-rows: 1fr 0.08fr 1fr;
-    -moz-column-gap: 20px;
-         column-gap: 20px;
+    column-gap: 20px;
     row-gap: 20px;
   }
 }
@@ -877,6 +872,7 @@ h6 {
 
 .contact_border {
   height: 4px;
+  transition: all 0.5s ease;
 }
 
 .contact_item:hover > .contact_border {
