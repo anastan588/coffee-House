@@ -292,6 +292,7 @@ $overlay-color: rgba(41, 41, 41, 0.4);
   height: 4px;
   background-color: $border_color_dark_link;
   opacity: 0;
+  transition: all 0.5s ease;
 }
 .nav_item:hover > .nav_underline {
   opacity: 1;
@@ -301,10 +302,10 @@ $overlay-color: rgba(41, 41, 41, 0.4);
   transition: all 0.5s ease-in;
   width: 0px;
 }
-.nav_item:hover > .nav_item_link > .nav_img {
-  opacity: 1;
-  width: 20px;
-}
+// .nav_item:hover > .nav_item_link > .nav_img {
+//   opacity: 1;
+//   width: 20px;
+// }
 .menu {
   display: flex;
   align-items: center;
@@ -871,6 +872,7 @@ $overlay-color: rgba(41, 41, 41, 0.4);
 }
 .contact_border {
   height: 4px;
+  transition: all 0.5s ease;
 }
 .contact_item:hover > .contact_border {
   background-color: $background_color_light;

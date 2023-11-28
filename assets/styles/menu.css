@@ -14,6 +14,8 @@
 *,
 *:before,
 *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -181,6 +183,7 @@ h6 {
   height: 4px;
   background-color: #403f3d;
   opacity: 0;
+  transition: all 0.5s ease;
 }
 
 .nav_item:hover > .nav_underline {
@@ -191,11 +194,6 @@ h6 {
   opacity: 0;
   transition: all 0.5s ease-in;
   width: 0px;
-}
-
-.nav_item:hover > .nav_item_link > .nav_img {
-  opacity: 1;
-  width: 20px;
 }
 
 .menu {
@@ -263,9 +261,7 @@ h6 {
   pointer-events: none;
   background-color: #665f55;
   color: #e1d4c9;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
+  user-select: none;
 }
 
 .menu_button_img_container {
@@ -301,8 +297,7 @@ h6 {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   row-gap: 38px;
-  -moz-column-gap: 40px;
-       column-gap: 40px;
+  column-gap: 40px;
 }
 
 .display_none_menu {
@@ -552,6 +547,7 @@ h6 {
 
 .contact_border {
   height: 4px;
+  transition: all 0.5s ease;
 }
 
 .contact_item:hover > .contact_border {
