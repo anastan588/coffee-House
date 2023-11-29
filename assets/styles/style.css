@@ -155,7 +155,7 @@ h6 {
   align-items: center;
   justify-content: space-between;
   padding-top: 20px;
-  padding-bottom: 21px;
+  padding-bottom: 20px;
   font-weight: 600;
   line-height: 150%;
   position: relative;
@@ -266,6 +266,8 @@ h6 {
 .nav_item {
   cursor: pointer;
   transition: all 0.5s ease-in;
+  display: flex;
+  flex-direction: column;
 }
 
 .nav_item_link {
@@ -276,29 +278,67 @@ h6 {
 }
 
 .nav_underline {
-  height: 4px;
+  height: 2px;
+  width: 0px;
   background-color: #403f3d;
-  opacity: 0;
-  transition: all 0.5s ease;
+  opacity: 1;
+  align-self: center;
+  transition: all 1s ease;
 }
 
 .nav_item:hover > .nav_underline {
-  opacity: 1;
+  animation-name: switchSlider;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-delay: 0;
 }
 
+@keyframes switchSlider {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
 .nav_img {
   opacity: 0;
   transition: all 0.5s ease-in;
   width: 0px;
 }
 
+.menu_navigation {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  transition: all 0.5s ease-in;
+}
+
 .menu {
   display: flex;
   align-items: center;
   gap: 8px;
-  cursor: pointer;
-  transition: all 0.5s ease-in;
   color: #403f3d;
+}
+
+.menu_underline {
+  height: 2px;
+  width: 0px;
+  background-color: #403f3d;
+  opacity: 1;
+  align-self: center;
+  transition: all 1s ease;
+}
+
+.menu_navigation:hover > .menu_underline {
+  animation-name: switchSlider;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-delay: 0;
 }
 
 @media (max-width: 768px) {
@@ -307,10 +347,6 @@ h6 {
     align-items: flex-start;
   }
 }
-.menu:hover {
-  border-bottom: 4px solid #403f3d;
-}
-
 .main {
   flex: 1 0 auto;
 }
@@ -318,7 +354,8 @@ h6 {
 .enjoy_block {
   background-image: url(./../../assets/pictures/img-hero.jpg);
   background-position: 50% 50%;
-  padding: 100px;
+  background-size: 100%;
+  padding: 100.5px;
   border-radius: 40px;
 }
 
@@ -570,7 +607,7 @@ h6 {
   padding-top: 215px;
   padding-bottom: 215px;
   background-position: 50% 50%;
-  background-size: 108% auto;
+  background-size: 110% auto;
   border-radius: 20px;
   cursor: pointer;
   transition: all 1s ease-in;
@@ -870,19 +907,42 @@ h6 {
   width: auto;
 }
 
+.contact_3 {
+  pointer-events: none;
+}
+
 .contact_border {
-  height: 4px;
+  align-self: center;
+  margin-right: 80px;
+  width: 70%;
+  background-color: #e1d4c9;
+  height: 2px;
+  width: 0px;
   transition: all 0.5s ease;
 }
 
 .contact_item:hover > .contact_border {
-  background-color: #e1d4c9;
+  animation-name: footer;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-delay: 0;
 }
 
+@keyframes footer {
+  from {
+    width: 0;
+  }
+  to {
+    width: 70%;
+  }
+}
 .contact_link {
   display: flex;
   align-items: center;
   gap: 6px;
+  box-sizing: border-box;
 }
 
 .contact_img {
