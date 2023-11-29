@@ -178,6 +178,8 @@ $text_color_dark: #403f3d;
 .nav_item {
   cursor: pointer;
   transition: all 0.5s ease-in;
+  display: flex;
+  flex-direction: column;
 }
 
 .nav_item_link {
@@ -188,14 +190,31 @@ $text_color_dark: #403f3d;
  
 }
 .nav_underline {
-  height: 4px;
+  height: 2px;
+  width: 0px;
   background-color: $border_color_dark_link;
-  opacity: 0; 
+  opacity: 1; 
   transition: all 0.5s ease;
+  align-self: center;
 }
 .nav_item:hover > .nav_underline {
-  opacity: 1;
+  // opacity: 1;
+  animation-name: switchSlider;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-delay: 0;
 }
+
+@keyframes switchSlider {
+  from {
+    width: 0;
+  } to {
+   width: 100%;
+  }  
+}
+
 .nav_img {
   opacity: 0;
   transition: all 0.5s ease-in;
@@ -213,10 +232,11 @@ $text_color_dark: #403f3d;
   transition: all 0.5s ease-in;
   pointer-events: none;
   color: $text_color_dark;
+   border-bottom: 3px solid $border_color_dark_link;
 }
 
 .menu:hover {
-  border-bottom: 4px solid $border_color_dark_link;
+ 
 }
 .menu_title {
 }
@@ -331,7 +351,7 @@ $text_color_dark: #403f3d;
   padding-top: 155px;
   padding-bottom: 155px;
   background-position: 50% 50%;
-  background-size: 108% auto;
+  background-size: 110.25% auto;
   transition: all 1s ease-in;
 }
 .menu_item:hover > .menu_item_img {
@@ -525,14 +545,44 @@ $text_color_dark: #403f3d;
   cursor: pointer;
   width: auto;
 }
-.contact_border {
-  height: 4px;
-  transition: all 0.5s ease;
-}
-.contact_item:hover > .contact_border {
-  background-color: $background_color_light;
+.contact_1 {
+
 }
 
+.contact_2 {
+
+}
+
+.contact_3 {
+ pointer-events: none;
+}
+
+.contact_border {
+  align-self: center;
+  margin-right: 80px;
+  width: 70%;
+  height: 2px;
+  width: 0px;
+  transition: all 0.5s ease;
+  background-color: $background_color_light;
+}
+.contact_item:hover > .contact_border {
+  
+  animation-name: footer;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-delay: 0;
+}
+
+@keyframes footer {
+  from {
+    width: 0;
+  } to {
+   width: 70%;
+  }  
+}
 .contact_link {
   display: flex;
   align-items: center;
