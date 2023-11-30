@@ -5,17 +5,10 @@ export let overlay = document.querySelector(".overlay");
 let burgerLine1 = document.querySelector(".line_1");
 let burgerLine2 = document.querySelector(".line_2");
 let menuItem = document.querySelectorAll(".nav_item");
-console.log(menu);
-console.log(body);
-console.log(overlay);
-console.log(burgerLine1);
-console.log(burgerLine2);
+
 
 function openOrCloseBurger(event) {
   event.stopPropagation();
-  console.log(event);
-  //console.log(window.innerWidth);
-  //console.log(typeof window.innerWidth);
   let styleOfOverlay = getComputedStyle(overlay);
   if (
     !menu.classList.contains("burger-open") &&
