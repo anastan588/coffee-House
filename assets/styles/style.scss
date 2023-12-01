@@ -292,6 +292,31 @@ $overlay-color: rgba(41, 41, 41, 0.4);
   }
 }
 
+
+@media (max-width: 600px) {
+  .navigation {
+    flex-direction: column;
+    align-items: center;
+  }
+  .navigation_list {
+    flex-direction: column;
+    gap: 60px;
+  }
+
+  .nav_item {
+    cursor: pointer;
+    transition: all 0.5s ease-in;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .nav_item_link {
+    font-size: 32px;
+font-weight: 600;
+line-height: 125%; 
+  }
+}
+
 .nav_item {
   cursor: pointer;
   transition: all 0.5s ease-in;
@@ -380,6 +405,7 @@ $overlay-color: rgba(41, 41, 41, 0.4);
   }
 }
 
+
 .menu_title {
 }
 .menu_img {
@@ -389,6 +415,17 @@ $overlay-color: rgba(41, 41, 41, 0.4);
 }
 .enjoy {
 }
+@media (max-width: 620px) {
+  .menu {
+    font-size: 32px;
+font-weight: 600;
+line-height: 125%;
+  }
+  .menu_img {
+    height: 40px;
+    width: 40px;
+  }
+}
 
 .enjoy_block {
   background-image: url(./../../assets/pictures/img-hero.jpg);
@@ -397,6 +434,24 @@ $overlay-color: rgba(41, 41, 41, 0.4);
   padding: 100.5px;
   border-radius: 40px;
 }
+
+@media (max-width: 1340px) {
+  .enjoy_block {
+    background-size: 130%;
+  }
+}
+
+@media (max-width: 1130px) {
+  .enjoy_block {
+    background-size: 150%; 
+  }
+}
+@media (max-width: 900px) {
+  .enjoy_block {
+    background-size: 180%; 
+  }
+}
+
 
 @media (max-width: 1000px) {
   .enjoy_block {
@@ -606,6 +661,13 @@ line-height: 115%;
   pointer-events: none;
   cursor: auto;
 }
+@media (max-width: 900px) {
+  .arrow {
+    // margin-top: -16px;
+  }
+}
+
+
 @media (max-width: 600px) {
   .arrow {
     display: none;
@@ -645,6 +707,12 @@ line-height: 115%;
   overflow: hidden;
   position: relative;
   transition: all 1.5s ease;
+}
+
+@media (max-width: 780px) {
+  .slider {
+    height: 640px;
+  }
 }
 
 @media (max-width: 720px) {
@@ -960,7 +1028,8 @@ animation-name: switchSlider;
     padding-top: 295px;
     padding-bottom: 295px;
     background-position: 50% 50%;
-    background-size: 688px auto;
+    background-size: 110% auto;
+    background-size: 726px auto;
   }
 }
 
@@ -1198,8 +1267,6 @@ animation-name: switchSlider;
   align-items: center;
 }
 
-
-
 @media (max-width: 1200px) {
   .footer_block {
     gap: 20px;
@@ -1213,9 +1280,9 @@ animation-name: switchSlider;
     gap: 100px;
   }
 }
-@media (max-width: 1100px) {
+@media (max-width: 1000px) {
   .footer_block {
-    padding: 100px 60px 100px 60px;
+    padding: 100px 60px 107px 60px;
   }
 }
 @media (max-width: 720px) {
