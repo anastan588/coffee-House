@@ -181,10 +181,11 @@ h6 {
   transition: all 0.5s ease;
 }
 
-.nav_logo_link:hover {
-  transform: scale(1.05);
+@media (hover: hover) {
+  .nav_logo_link:hover {
+    transform: scale(1.05);
+  }
 }
-
 .logo {
   max-height: 60px;
 }
@@ -318,20 +319,21 @@ h6 {
   transition: all 1s ease;
 }
 
-.nav_item:hover > .nav_underline {
-  animation-name: navHover;
-  animation-duration: 0.5s;
-  animation-timing-function: linear;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
-}
-
-@keyframes navHover {
-  from {
-    width: 0%;
+@media (hover: hover) {
+  .nav_item:hover > .nav_underline {
+    animation-name: navHover;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
   }
-  to {
-    width: 100%;
+  @keyframes navHover {
+    from {
+      width: 0%;
+    }
+    to {
+      width: 100%;
+    }
   }
 }
 .nav_img {
@@ -364,16 +366,17 @@ h6 {
   transition: all 1s ease;
 }
 
-.menu_navigation:hover > .menu_underline {
-  animation-name: navHover;
-  animation-duration: 1s;
-  animation-timing-function: linear;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
-  animation-delay: 0;
+@media (hover: hover) {
+  .menu_navigation:hover > .menu_underline {
+    animation-name: navHover;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-delay: 0;
+  }
 }
-
-@media (max-width: 768px) {
+@media (hover: hover) and (max-width: 768px) {
   .menu {
     justify-content: center;
     align-items: flex-start;
@@ -513,10 +516,11 @@ h6 {
   transition: all 0.5s ease-in;
 }
 
-.enjoy_button:hover > .enjoy_button_img {
-  width: 24px;
+@media (hover: hover) {
+  .enjoy_button:hover > .enjoy_button_img {
+    width: 24px;
+  }
 }
-
 @media (max-width: 1000px) {
   .enjoy_button_img {
     width: 24px;
@@ -631,18 +635,18 @@ h6 {
   transition: all 0.5s ease-in;
 }
 
-.arrow_left:hover {
-  background-color: #665f55;
-  border-color: #665f55;
-  background-image: url(./../../assets/icons/arrow-left-light.png);
+@media (hover: hover) {
+  .arrow_left:hover {
+    background-color: #665f55;
+    border-color: #665f55;
+    background-image: url(./../../assets/icons/arrow-left-light.png);
+  }
+  .arrow_right:hover {
+    background-color: #665f55;
+    border-color: #665f55;
+    background-image: url(./../../assets/icons/arrow-right-light.png);
+  }
 }
-
-.arrow_right:hover {
-  background-color: #665f55;
-  border-color: #665f55;
-  background-image: url(./../../assets/icons/arrow-right-light.png);
-}
-
 .slider {
   flex-grow: 1;
   display: flex;
@@ -951,10 +955,11 @@ h6 {
     background-size: 726px auto;
   }
 }
-.about_img_container:hover {
-  background-size: 100% auto;
+@media (hover: hover) {
+  .about_img_container:hover {
+    background-size: 100% auto;
+  }
 }
-
 .about_img_1 {
   grid-row-start: 1;
   grid-row-end: 3;
@@ -1103,10 +1108,11 @@ h6 {
   transition: all 0.5s ease-in;
 }
 
-.mobile_button:hover {
-  background-color: #665f55;
+@media (hover: hover) {
+  .mobile_button:hover {
+    background-color: #665f55;
+  }
 }
-
 .mobile_button_img {
   height: 36px;
   width: 36px;
@@ -1120,28 +1126,24 @@ h6 {
   transition: all 0.5s ease-in;
 }
 
-.mobile_button:hover > .apple {
-  background-image: url(./../../assets/icons/apple-light.svg);
-}
-
 .android {
   background-image: url(./../../assets/icons/android.svg);
   transition: all 0.5s ease-in;
 }
 
-.mobile_button:hover > .android {
-  background-image: url(./../../assets/icons/android-light.svg);
+@media (hover: hover) {
+  .mobile_button:hover > .apple {
+    background-image: url(./../../assets/icons/apple-light.svg);
+  }
+  .mobile_button:hover > .android {
+    background-image: url(./../../assets/icons/android-light.svg);
+  }
 }
-
 .mobile_button_context {
   font-weight: 600;
   line-height: 150%;
   color: #403f3d;
   transition: all 0.5s ease-in;
-}
-
-.mobile_button:hover > .mobile_button_context {
-  color: #e1d4c9;
 }
 
 .mobile_button_title {
@@ -1150,10 +1152,14 @@ h6 {
   line-height: 140%;
 }
 
-.mobile_button:hover > .mobile_button_title {
-  color: #e1d4c9;
+@media (hover: hover) {
+  .mobile_button:hover > .mobile_button_context {
+    color: #e1d4c9;
+  }
+  .mobile_button:hover > .mobile_button_title {
+    color: #e1d4c9;
+  }
 }
-
 @media (max-width: 1000px) {
   .mobile_img_block {
     align-self: center;
@@ -1274,10 +1280,11 @@ h6 {
   transition: all 0.5s ease-in;
 }
 
-.media_item:hover {
-  background-color: #e1d4c9;
+@media (hover: hover) {
+  .media_item:hover {
+    background-color: #e1d4c9;
+  }
 }
-
 .media_img {
   height: 24px;
   width: 24px;
@@ -1288,28 +1295,29 @@ h6 {
   transition: all 0.5s ease-in;
 }
 
-.media_item:hover .media_twitter {
-  background-image: url(./../../assets/icons/twitter-dark.svg);
-}
-
 .media_instagram {
   background-image: url(./../../assets/icons/instagram.svg);
   transition: all 0.5s ease-in;
 }
 
-.media_item:hover .media_instagram {
-  background-image: url(./../../assets/icons/instagram-dark.svg);
+@media (hover: hover) {
+  .media_item:hover .media_twitter {
+    background-image: url(./../../assets/icons/twitter-dark.svg);
+  }
+  .media_item:hover .media_instagram {
+    background-image: url(./../../assets/icons/instagram-dark.svg);
+  }
 }
-
 .media_facebook {
   background-image: url(./../../assets/icons/facebook.svg);
   transition: all 0.5s ease-in;
 }
 
-.media_item:hover .media_facebook {
-  background-image: url(./../../assets/icons/facebook-dark.svg);
+@media (hover: hover) {
+  .media_item:hover .media_facebook {
+    background-image: url(./../../assets/icons/facebook-dark.svg);
+  }
 }
-
 .footer_contacts_block {
   display: flex;
   flex-direction: column;
@@ -1350,15 +1358,16 @@ h6 {
   transition: all 0.5s ease;
 }
 
-.contact_item:hover > .contact_border {
-  animation-name: footer;
-  animation-duration: 1s;
-  animation-timing-function: linear;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
-  animation-delay: 0;
+@media (hover: hover) {
+  .contact_item:hover > .contact_border {
+    animation-name: footer;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-delay: 0;
+  }
 }
-
 @keyframes footer {
   from {
     width: 0;

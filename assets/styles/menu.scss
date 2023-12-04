@@ -193,9 +193,10 @@ $overlay-color: rgba(41, 41, 41, 0.4);
   cursor: pointer;
   transition: all 0.5s ease;
 }
-
-.nav_logo_link:hover {
-  transform: scale(1.05);
+@media (hover: hover) {
+  .nav_logo_link:hover {
+    transform: scale(1.05);
+  }
 }
 
 .logo {
@@ -334,14 +335,16 @@ $overlay-color: rgba(41, 41, 41, 0.4);
   align-self: center;
   transition: all 1s ease;
 }
-.nav_item:hover > .nav_underline {
-  // opacity: 1;
-  animation-name: switchSlider;
-  animation-duration: 1s;
-  animation-timing-function: linear;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
-  animation-delay: 0;
+@media (hover: hover) {
+  .nav_item:hover > .nav_underline {
+    // opacity: 1;
+    animation-name: switchSlider;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-delay: 0;
+  }
 }
 
 @keyframes switchSlider {
@@ -472,11 +475,13 @@ $overlay-color: rgba(41, 41, 41, 0.4);
   cursor: pointer;
   transition: all 0.5s ease-in;
 }
-
-.menu_button:hover {
-  background-color: $background_color_dark;
-  color: $text_color_light;
+@media (hover: hover) {
+  .menu_button:hover {
+    background-color: $background_color_dark;
+    color: $text_color_light;
+  }
 }
+
 .active_button {
   pointer-events: none;
   background-color: $background_color_dark;
@@ -494,9 +499,12 @@ $overlay-color: rgba(41, 41, 41, 0.4);
   border-radius: 50%;
 }
 
-.menu_button:hover > .menu_button_img_container {
-  background-color: $background_color_light;
+@media (hover: hover) {
+  .menu_button:hover > .menu_button_img_container {
+    background-color: $background_color_light;
+  }
 }
+
 .active_button > .menu_button_img_container {
   background-color: $background_color_light;
 }
@@ -541,8 +549,6 @@ $overlay-color: rgba(41, 41, 41, 0.4);
     grid-template-columns: repeat(1, 1fr);
   }
 }
-
-
 
 @media (max-width: 600px) {
   .menu_items_block {
@@ -685,10 +691,12 @@ $overlay-color: rgba(41, 41, 41, 0.4);
     padding-bottom: 155px;
   }
 }
-
-.menu_item:hover > .menu_item_img {
-  background-size: 100% auto;
+@media (hover: hover) {
+  .menu_item:hover > .menu_item_img {
+    background-size: 100% auto;
+  }
 }
+
 .item_coffee_1 {
   background-image: url(./../pictures/coffee-menu/coffee-1.jpg);
 }
@@ -954,8 +962,11 @@ $overlay-color: rgba(41, 41, 41, 0.4);
   cursor: pointer;
   transition: all 0.5s ease-in;
 }
-.media_item:hover {
-  background-color: $background_color_light;
+
+@media (hover: hover) {
+  .media_item:hover {
+    background-color: $background_color_light;
+  }
 }
 
 .media_img {
@@ -967,17 +978,18 @@ $overlay-color: rgba(41, 41, 41, 0.4);
   background-image: url(./../../assets/icons/twitter.svg);
   transition: all 0.5s ease-in;
 }
-
-.media_item:hover .media_twitter {
-  background-image: url(./../../assets/icons/twitter-dark.svg);
+@media (hover: hover) {
+  .media_item:hover .media_twitter {
+    background-image: url(./../../assets/icons/twitter-dark.svg);
+  }
+  .media_item:hover .media_instagram {
+    background-image: url(./../../assets/icons/instagram-dark.svg);
+  }
 }
+
 .media_instagram {
   background-image: url(./../../assets/icons/instagram.svg);
   transition: all 0.5s ease-in;
-}
-
-.media_item:hover .media_instagram {
-  background-image: url(./../../assets/icons/instagram-dark.svg);
 }
 
 .media_facebook {
@@ -985,9 +997,12 @@ $overlay-color: rgba(41, 41, 41, 0.4);
   transition: all 0.5s ease-in;
 }
 
-.media_item:hover .media_facebook {
-  background-image: url(./../../assets/icons/facebook-dark.svg);
+@media (hover: hover) {
+  .media_item:hover .media_facebook {
+    background-image: url(./../../assets/icons/facebook-dark.svg);
+  }
 }
+
 .footer_contacts_block {
   display: flex;
   flex-direction: column;
@@ -1030,13 +1045,16 @@ $overlay-color: rgba(41, 41, 41, 0.4);
   transition: all 0.5s ease;
   background-color: $background_color_light;
 }
-.contact_item:hover > .contact_border {
-  animation-name: footer;
-  animation-duration: 1s;
-  animation-timing-function: linear;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
-  animation-delay: 0;
+
+@media (hover: hover) {
+  .contact_item:hover > .contact_border {
+    animation-name: footer;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-delay: 0;
+  }
 }
 
 @keyframes footer {
