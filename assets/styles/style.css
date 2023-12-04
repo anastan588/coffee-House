@@ -14,6 +14,8 @@
 *,
 *:before,
 *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -646,7 +648,7 @@ h6 {
   display: flex;
   justify-content: center;
   max-width: 480px;
-  height: 656.4px;
+  height: 640px;
   overflow: hidden;
   position: relative;
   transition: all 1.5s ease;
@@ -754,11 +756,11 @@ h6 {
 }
 @media (max-width: 500px) {
   .slide_img {
-    max-width: 350px;
-    max-height: 350px;
+    max-width: 348px;
+    max-height: 348px;
   }
   .slider {
-    max-width: 350px;
+    max-width: 348px;
   }
 }
 .slide_content {
@@ -884,24 +886,21 @@ h6 {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: 1fr 0.28fr 1fr;
-  -moz-column-gap: 40px;
-       column-gap: 40px;
+  column-gap: 40px;
   row-gap: 40px;
 }
 
 @media (max-width: 1200px) {
   .about_images_block {
     grid-template-rows: 1fr 0.16fr 1fr;
-    -moz-column-gap: 30px;
-         column-gap: 30px;
+    column-gap: 30px;
     row-gap: 30px;
   }
 }
 @media (max-width: 1100px) {
   .about_images_block {
     grid-template-rows: 1fr 0.08fr 1fr;
-    -moz-column-gap: 20px;
-         column-gap: 20px;
+    column-gap: 20px;
     row-gap: 20px;
   }
 }

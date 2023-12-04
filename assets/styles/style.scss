@@ -703,7 +703,7 @@ line-height: 115%;
   display: flex;
   justify-content: center;
   max-width: 480px;
-  height: 656.4px;
+  height: 640px;
   overflow: hidden;
   position: relative;
   transition: all 1.5s ease;
@@ -827,12 +827,12 @@ line-height: 115%;
 
 @media (max-width: 500px) {
   .slide_img {
-    max-width: 350px;
-  max-height: 350px;
+    max-width: 348px;
+  max-height: 348px;
    
   }
   .slider {
-    max-width: 350px;
+    max-width: 348px;
   }
 }
 

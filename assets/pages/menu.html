@@ -13,11 +13,16 @@
   </head>
   <body class="body">
     <div class="main_container">
+      <div class="overlay"></div>
       <header class="header">
         <div class="header_block container inner_container">
           <a href="./../../index.html" class="nav_logo_link">
             <img src="./../../assets/icons/logo.svg" alt="logo" class="logo">
           </a>
+          <div class="burger">
+            <div class="burger_line line_1"></div>
+            <div class="burger_line line_2"></div>
+          </div>
           <div class="menu_block_burger">
             <nav class="navigation">
             <ul class="navigation_list">
@@ -73,7 +78,6 @@
             >
           </a> 
           </div>
-         
         </div>
       </header>
       <main class="main">
@@ -139,7 +143,7 @@
                       frothed milk
                     </p>
                   </div>
-                  <p class="menu_item_price">$7.00</p>
+                  <p class="menu_item_price menu_item_price_3">$7.00</p>
                 </div>
               </div>
               <div class="menu_item">
@@ -151,7 +155,7 @@
                       Espresso with frothed milk, cream and aromatic honey
                     </p>
                   </div>
-                  <p class="menu_item_price">$5.50</p>
+                  <p class="menu_item_price menu_item_price_3">$5.50</p>
                 </div>
               </div>
               <div class="menu_item">
@@ -164,10 +168,10 @@
                     </p>
                   </div>
 
-                  <p class="menu_item_price">$5.00</p>
+                  <p class="menu_item_price menu_item_price_4">$5.00</p>
                 </div>
               </div>
-              <div class="menu_item">
+              <div class="menu_item menu_item_coffee_5">
                 <div class="menu_item_img item_coffee_5"></div>
                 <div class="menu_item_content">
                   <div class="menu_item_text">
@@ -177,7 +181,7 @@
                   <p class="menu_item_price">$4.50</p>
                 </div>
               </div>
-              <div class="menu_item">
+              <div class="menu_item menu_item_coffee_6">
                 <div class="menu_item_img item_coffee_6"></div>
                 <div class="menu_item_content">
                   <div class="menu_item_text">
@@ -190,7 +194,7 @@
                   <p class="menu_item_price">$5.50</p>
                 </div>
               </div>
-              <div class="menu_item">
+              <div class="menu_item menu_item_coffee_7">
                 <div class="menu_item_img item_coffee_7"></div>
                 <div class="menu_item_content">
                   <div class="menu_item_text">
@@ -203,7 +207,7 @@
                   <p class="menu_item_price">$5.50</p>
                 </div>
               </div>
-              <div class="menu_item">
+              <div class="menu_item menu_item_coffee_8">
                 <div class="menu_item_img item_coffee_8"></div>
                 <div class="menu_item_content">
                   <div class="menu_item_text">
@@ -373,6 +377,8 @@
               </div>
             </div>
           </div>
+          <div class="buttom_load_more">
+          </div>
         </section>
       </main>
       <footer id="contacts" class="footer">
@@ -440,6 +446,7 @@
         </div>
       </footer>
     </div>
+    <script src="./../scripts/burger.js" type="module"></script>
     <script src="./assets/scripts/index.js"></script>
   </body>
 </html>
