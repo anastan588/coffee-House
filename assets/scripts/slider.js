@@ -75,12 +75,12 @@ function moveSlideToRight(event) {
 }
 
 
-arrowLeft.addEventListener('click', (event)=> {
-   console.log(event.target);
-   moveSlideToleft(event);
-});
+// arrowLeft.addEventListener('click', (event)=> {
+//    console.log(event.target);
+//    moveSlideToleft(event);
+// });
 
-arrowRight.addEventListener('click', (event)=> {
-    console.log(event.target);
-    moveSlideToRight(event);
- });
+// arrowRight.addEventListener('click', (event)=> {
+//     console.log(event.target);
+//     moveSlideToRight(event);
+//  });
