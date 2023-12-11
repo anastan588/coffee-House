@@ -432,7 +432,7 @@ h6 {
     gap: 8px;
   }
 }
-.menu_button {
+.menu_button_item {
   padding: 8px 16px 8px 8px;
   display: flex;
   align-items: center;
@@ -442,10 +442,11 @@ h6 {
   color: #403f3d;
   cursor: pointer;
   transition: all 0.5s ease-in;
+  user-select: none;
 }
 
 @media (hover: hover) {
-  .menu_button:hover {
+  .menu_button_item:hover {
     background-color: #665f55;
     color: #e1d4c9;
   }
@@ -454,7 +455,6 @@ h6 {
   pointer-events: none;
   background-color: #665f55;
   color: #e1d4c9;
-  user-select: none;
 }
 
 .menu_button_img_container {
@@ -469,7 +469,7 @@ h6 {
 }
 
 @media (hover: hover) {
-  .menu_button:hover > .menu_button_img_container {
+  .menu_button_item:hover > .menu_button_img_container {
     background-color: #e1d4c9;
   }
 }
@@ -485,6 +485,7 @@ h6 {
 .menu_items_container {
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 
 .menu_items_block {
@@ -492,6 +493,8 @@ h6 {
   grid-template-columns: repeat(4, 1fr);
   row-gap: 38px;
   column-gap: 40px;
+  opacity: 1;
+  transition: all 1.5s ease;
 }
 
 @media (max-width: 1330px) {
@@ -522,7 +525,8 @@ h6 {
   }
 }
 .display_none_menu {
-  display: none;
+  position: absolute;
+  opacity: 0;
 }
 
 .menu_item {
@@ -674,18 +678,12 @@ h6 {
 }
 
 @media (max-width: 1330px) {
-  .menu_item_coffee_7 {
-    display: none;
-  }
-  .menu_item_coffee_8 {
+  .display_none_tablet {
     display: none;
   }
 }
 @media (max-width: 900px) {
-  .menu_item_coffee_5 {
-    display: none;
-  }
-  .menu_item_coffee_6 {
+  .display_none_mobile {
     display: none;
   }
 }
@@ -798,6 +796,12 @@ h6 {
   background-repeat: no-repeat;
   background-position: 50% 50%;
   border: 1px solid #665f55;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.rotate {
+  transform: rotate(180deg);
 }
 
 @media (max-width: 1330px) {
