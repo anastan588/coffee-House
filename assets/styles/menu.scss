@@ -464,7 +464,7 @@ $overlay-color: rgba(41, 41, 41, 0.4);
     gap: 8px;
   }
 }
-.menu_button {
+.menu_button_item {
   padding: 8px 16px 8px 8px;
   display: flex;
   align-items: center;
@@ -474,9 +474,10 @@ $overlay-color: rgba(41, 41, 41, 0.4);
   color: $text_color_dark;
   cursor: pointer;
   transition: all 0.5s ease-in;
+  user-select: none;
 }
 @media (hover: hover) {
-  .menu_button:hover {
+  .menu_button_item:hover {
     background-color: $background_color_dark;
     color: $text_color_light;
   }
@@ -485,8 +486,7 @@ $overlay-color: rgba(41, 41, 41, 0.4);
 .active_button {
   pointer-events: none;
   background-color: $background_color_dark;
-  color: $text_color_light;
-  user-select: none;
+  color: $text_color_light; 
 }
 .menu_button_img_container {
   width: 30px;
@@ -500,7 +500,7 @@ $overlay-color: rgba(41, 41, 41, 0.4);
 }
 
 @media (hover: hover) {
-  .menu_button:hover > .menu_button_img_container {
+  .menu_button_item:hover > .menu_button_img_container {
     background-color: $background_color_light;
   }
 }
@@ -517,6 +517,7 @@ $overlay-color: rgba(41, 41, 41, 0.4);
 .menu_items_container {
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 .menu_items_block {
   display: grid;
@@ -524,6 +525,8 @@ $overlay-color: rgba(41, 41, 41, 0.4);
   // grid-template-rows: repeat(2, 1fr);
   row-gap: 38px;
   column-gap: 40px;
+  opacity:1;
+  transition: all 1.5s ease;
 }
 
 @media (max-width: 1330px) {
@@ -566,7 +569,8 @@ $overlay-color: rgba(41, 41, 41, 0.4);
 }
 
 .display_none_menu {
-  display: none;
+  position: absolute;
+  opacity: 0;
 }
 .menu_item {
   border: 1px solid $border_color_light;
@@ -724,18 +728,20 @@ $overlay-color: rgba(41, 41, 41, 0.4);
 
 @media (max-width: 1330px) {
   .menu_item_coffee_7 {
-    display: none;
   }
   .menu_item_coffee_8 {
+  }
+  .display_none_tablet {
     display: none;
   }
 }
 
 @media (max-width: 900px) {
   .menu_item_coffee_5 {
-    display: none;
   }
   .menu_item_coffee_6 {
+  }
+  .display_none_mobile {
     display: none;
   }
 }
@@ -838,6 +844,14 @@ $overlay-color: rgba(41, 41, 41, 0.4);
   background-repeat: no-repeat;
   background-position: 50% 50%;
   border: 1px solid $border_color_dark;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+.buttom_load_more:hover {
+}
+
+.rotate {
+  transform: rotate(180deg);
 }
 
 @media (max-width: 1330px) {
