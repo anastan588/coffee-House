@@ -157,6 +157,247 @@ h6 {
   top: 101px;
 }
 
+.popup {
+  display: none;
+  padding: 16px;
+  gap: 20px;
+  background-color: #e1d4c9;
+  border-radius: 40px;
+  max-width: 832px;
+}
+
+@media (max-width: 850px) {
+  .popup {
+    max-width: 720px;
+  }
+}
+@media (max-width: 450px) {
+  .popup {
+    max-width: 342px;
+  }
+}
+.open_popup {
+  display: flex;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  z-index: 6;
+}
+
+.popup_img_container {
+  width: 310px;
+  height: 310px;
+  border-radius: 40px;
+  background-position: 50% 50%;
+  background-size: 110.25% auto;
+  transition: all 1s ease-in;
+}
+
+@media (max-width: 700px) {
+  .popup_img_container {
+    display: none;
+  }
+}
+@media (hover: hover) {
+  .popup_img_container:hover {
+    background-size: 100% auto;
+  }
+}
+.popup_contant_container {
+  max-width: 468px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+@media (max-width: 850px) {
+  .popup_contant_container {
+    max-width: 346px;
+  }
+}
+.popup_title {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 125%;
+}
+
+.popup_description {
+  font-weight: 400;
+  line-height: 150%;
+}
+
+.popup_size_container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.size_title {
+  font-weight: 400;
+  line-height: 150%;
+}
+
+.size_buttons_block {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.size_button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px 8px 8px;
+  border-radius: 100px;
+  border: 1px solid #c1b6ad;
+  font-weight: 600;
+  line-height: 150%;
+  cursor: pointer;
+}
+
+.size_mark_letter {
+  padding: 3px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: #c1b6ad;
+}
+
+@media (hover: hover) {
+  .size_button:hover {
+    background-color: #665f55;
+  }
+  .size_button:hover > .size_mark_letter {
+    background-color: #e1d4c9;
+  }
+  .size_button:hover > .size_amount {
+    color: #e1d4c9;
+  }
+}
+.active_button_popup > .size_amount {
+  color: #e1d4c9;
+}
+
+.active_button_popup > .size_mark_letter {
+  background-color: #e1d4c9;
+}
+
+.popup_additives_container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.additives_title {
+  font-weight: 400;
+  line-height: 150%;
+}
+
+.additives_buttons_block {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.additives_button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px 8px 8px;
+  border-radius: 100px;
+  border: 1px solid #c1b6ad;
+  font-weight: 600;
+  line-height: 150%;
+  cursor: pointer;
+}
+
+.active_button_popup {
+  background-color: #665f55;
+}
+
+.active_button_popup > .additives_ingridient {
+  color: #e1d4c9;
+}
+
+.active_button_popup > .additives_mark_number {
+  background-color: #e1d4c9;
+}
+
+.additives_mark_number {
+  padding: 3px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: #c1b6ad;
+}
+
+@media (hover: hover) {
+  .additives_button:hover {
+    background-color: #665f55;
+  }
+  .additives_button:hover > .additives_mark_number {
+    background-color: #e1d4c9;
+  }
+  .additives_button:hover > .additives_ingridient {
+    color: #e1d4c9;
+  }
+}
+.popup_total_container {
+  display: flex;
+  justify-content: space-between;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 125%;
+}
+
+.total_title {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 125%;
+}
+
+.popup_attention_container {
+  display: flex;
+  gap: 12px;
+  border-top: 1px solid #c1b6ad;
+  padding-bottom: 12px;
+  padding-top: 12px;
+}
+
+.attention_information {
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 140%;
+}
+
+.popup_close_button {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  border-radius: 100px;
+  border: 1px solid #665f55;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  cursor: pointer;
+}
+
+@media (hover: hover) {
+  .popup_close_button:hover {
+    background-color: #665f55;
+    color: #e1d4c9;
+  }
+}
+.close_button_text {
+  font-weight: 600;
+  line-height: 150%;
+}
+
 .header {
   position: relative;
 }
@@ -525,7 +766,7 @@ h6 {
   }
 }
 .display_none_menu {
-  position: absolute;
+  display: none;
   opacity: 0;
 }
 
