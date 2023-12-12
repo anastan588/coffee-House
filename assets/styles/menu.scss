@@ -486,7 +486,7 @@ $overlay-color: rgba(41, 41, 41, 0.4);
 .active_button {
   pointer-events: none;
   background-color: $background_color_dark;
-  color: $text_color_light; 
+  color: $text_color_light;
 }
 .menu_button_img_container {
   width: 30px;
@@ -525,7 +525,7 @@ $overlay-color: rgba(41, 41, 41, 0.4);
   // grid-template-rows: repeat(2, 1fr);
   row-gap: 38px;
   column-gap: 40px;
-  opacity:1;
+  opacity: 1;
   transition: all 1.5s ease;
 }
 
@@ -578,6 +578,7 @@ $overlay-color: rgba(41, 41, 41, 0.4);
   display: flex;
   flex-direction: column;
   cursor: pointer;
+  transition: all 1s ease-in;
 }
 
 .menu_item_img {
@@ -732,7 +733,9 @@ $overlay-color: rgba(41, 41, 41, 0.4);
   .menu_item_coffee_8 {
   }
   .display_none_tablet {
-    display: none;
+    position: absolute;
+    z-index: -3;
+    opacity: 0;
   }
 }
 
@@ -742,7 +745,9 @@ $overlay-color: rgba(41, 41, 41, 0.4);
   .menu_item_coffee_6 {
   }
   .display_none_mobile {
-    display: none;
+    position: absolute;
+    z-index: -3;
+    opacity: 0;
   }
 }
 
@@ -845,9 +850,10 @@ $overlay-color: rgba(41, 41, 41, 0.4);
   background-position: 50% 50%;
   border: 1px solid $border_color_dark;
   cursor: pointer;
-  transition: all 0.5s ease;
+  transition: all 1s ease;
 }
-.buttom_load_more:hover {
+.buttom_load_more_click {
+  transform: rotate(180deg);
 }
 
 .rotate {
@@ -859,7 +865,9 @@ $overlay-color: rgba(41, 41, 41, 0.4);
     display: flex;
   }
 }
-
+.display_none_load_more_button {
+  display: none;
+}
 .footer {
   padding-top: 100px;
   padding-bottom: 40px;
