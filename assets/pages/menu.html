@@ -14,6 +14,62 @@
   <body class="body">
     <div class="main_container">
       <div class="overlay"></div>
+      <div class="popup">
+        <div class="popup_img_container"></div>
+        <div class="popup_contant_container">
+          <h2 class="popup_title"></h2>
+          <h3 class="popup_description"></h3>
+          <div class="popup_size_container">
+            <h3 class="size_title">Size</h3>
+            <div class="size_buttons_block">
+              <div class="size_button size_s">
+                <div class="size_mark_letter">S</div>
+                <p class="size_amount size_amount_S"></p>
+              </div>
+              <div class="size_button size_m">
+                <div class="size_mark_letter">M</div>
+                <p class="size_amount size_amount_M"></p>
+              </div>
+              <div class="size_button size_l">
+                <div class="size_mark_letter">L</div>
+                <p class="size_amount size_amount_L"></p>
+              </div>
+            </div>
+          </div>
+          <div class="popup_additives_container">
+            <h3 class="additives_title">Additives</h3>
+            <div class="additives_buttons_block">
+              <div class="additives_button additives_1">
+                <div class="additives_mark_number">1</div>
+                <p class="additives_ingridient additives_name_1"></p>
+              </div>
+              <div class="additives_button additives_2">
+                <div class="additives_mark_number">2</div>
+                <p class="additives_ingridient additives_name_2"></p>
+              </div>
+              <div class="additives_button additives_3">
+                <div class="additives_mark_number">3</div>
+                <p class="additives_ingridient additives_name_3"></p>
+              </div>
+            </div>
+          </div>
+          <div class="popup_total_container">
+            <h2 class="total_title">Total:</h2>
+            <p class="total_price"></p>
+          </div>
+          <div class="popup_attention_container">
+            <img src="./../icons/info.svg" alt="info" class="attention_image" />
+            <p class="attention_information">
+              The cost is not final. Download our mobile app to see the final
+              price and place your order. Earn loyalty points and enjoy your
+              favorite coffee with up to 20% discount.
+            </p>
+          </div>
+          <div class="popup_close_button">
+            <p class="close_button_text">Close</p>
+          </div>
+        </div>
+      </div>
       <header class="header">
         <div class="header_block container inner_container">
           <a href="./../../index.html" class="nav_logo_link">
@@ -219,8 +275,7 @@
                 <div class="menu_item_content">
                   <div class="menu_item_text">
                     <h3 class="menu_item_title"></h3>
-                    <p class="menu_item_description">
-                    </p>
+                    <p class="menu_item_description"></p>
                   </div>
                   <p class="menu_item_price"></p>
                 </div>
@@ -230,8 +285,7 @@
                 <div class="menu_item_content">
                   <div class="menu_item_text">
                     <h3 class="menu_item_title"></h3>
-                    <p class="menu_item_description">
-                    </p>
+                    <p class="menu_item_description"></p>
                   </div>
                   <p class="menu_item_price"></p>
                 </div>
@@ -241,8 +295,7 @@
                 <div class="menu_item_content">
                   <div class="menu_item_text">
                     <h3 class="menu_item_title"></h3>
-                    <p class="menu_item_description">
-                    </p>
+                    <p class="menu_item_description"></p>
                   </div>
                   <p class="menu_item_price"></p>
                 </div>
@@ -253,101 +306,88 @@
                 <div class="menu_item_img item_dessert_1"></div>
                 <div class="menu_item_content">
                   <div class="menu_item_text">
-                    <h3 class="menu_item_title">Marble cheesecake</h3>
+                    <h3 class="menu_item_title"></h3>
                     <p class="menu_item_description">
-                      Philadelphia cheese with lemon zest on a light sponge cake
-                      and red currant jam
                     </p>
                   </div>
-                  <p class="menu_item_price">$3.50</p>
+                  <p class="menu_item_price"></p>
                 </div>
               </div>
               <div class="menu_item">
                 <div class="menu_item_img item_dessert_2"></div>
                 <div class="menu_item_content">
                   <div class="menu_item_text">
-                    <h3 class="menu_item_title">Red velvet</h3>
+                    <h3 class="menu_item_title"></h3>
                     <p class="menu_item_description">
-                      Layer cake with cream cheese frosting
                     </p>
                   </div>
-                  <p class="menu_item_price">$4.00</p>
+                  <p class="menu_item_price"></p>
                 </div>
               </div>
               <div class="menu_item">
                 <div class="menu_item_img item_dessert_3"></div>
                 <div class="menu_item_content">
                   <div class="menu_item_text">
-                    <h3 class="menu_item_title">Cheesecakes</h3>
+                    <h3 class="menu_item_title"></h3>
                     <p class="menu_item_description">
-                      Soft cottage cheese pancakes with sour cream and fresh
-                      berries and sprinkled with powdered sugar
                     </p>
                   </div>
-                  <p class="menu_item_price">$4.50</p>
+                  <p class="menu_item_price"></p>
                 </div>
               </div>
               <div class="menu_item">
                 <div class="menu_item_img item_dessert_4"></div>
                 <div class="menu_item_content">
                   <div class="menu_item_text">
-                    <h3 class="menu_item_title">Creme brulee</h3>
+                    <h3 class="menu_item_title"></h3>
                     <p class="menu_item_description">
-                      Delicate creamy dessert in a caramel basket with wild
-                      berries
                     </p>
                   </div>
-                  <p class="menu_item_price">$4.00</p>
+                  <p class="menu_item_price"></p>
                 </div>
               </div>
               <div class="menu_item menu_item_dessert_5 display_none_mobile">
                 <div class="menu_item_img item_dessert_5"></div>
                 <div class="menu_item_content">
                   <div class="menu_item_text">
-                    <h3 class="menu_item_title">Pancakes</h3>
+                    <h3 class="menu_item_title"></h3>
                     <p class="menu_item_description">
-                      Tender pancakes with strawberry jam and fresh strawberries
                     </p>
                   </div>
-                  <p class="menu_item_price">$4.50</p>
+                  <p class="menu_item_price"></p>
                 </div>
               </div>
               <div class="menu_item display_none_mobile">
                 <div class="menu_item_img item_dessert_6"></div>
                 <div class="menu_item_content">
                   <div class="menu_item_text">
-                    <h3 class="menu_item_title">Honey cake</h3>
+                    <h3 class="menu_item_title"></h3>
                     <p class="menu_item_description">
-                      Classic honey cake with delicate custard
                     </p>
                   </div>
-                  <p class="menu_item_price">$4.50</p>
+                  <p class="menu_item_price"></p>
                 </div>
               </div>
               <div class="menu_item display_none_tablet">
                 <div class="menu_item_img item_dessert_7"></div>
                 <div class="menu_item_content">
                   <div class="menu_item_text">
-                    <h3 class="menu_item_title">Chocolate cake</h3>
+                    <h3 class="menu_item_title"></h3>
                     <p class="menu_item_description">
-                      Cake with hot chocolate filling and nuts with dried
-                      apricots
                     </p>
                   </div>
-                  <p class="menu_item_price">$5.50</p>
+                  <p class="menu_item_price"></p>
                 </div>
               </div>
               <div class="menu_item display_none_tablet">
                 <div class="menu_item_img item_dessert_8"></div>
                 <div class="menu_item_content">
                   <div class="menu_item_text">
-                    <h3 class="menu_item_title">Black forest</h3>
+                    <h3 class="menu_item_title"></h3>
                     <p class="menu_item_description">
-                      A combination of thin sponge cake with cherry jam and
-                      light chocolate mousse
                     </p>
                   </div>
-                  <p class="menu_item_price">$6.50</p>
+                  <p class="menu_item_price"></p>
                 </div>
               </div>
             </div>
@@ -425,5 +465,6 @@
     </div>
     <script src="./../scripts/burger.js" type="module"></script>
     <script src="./../scripts/cards.js" type="module"></script>
+    <script src="./../scripts/popup.js" type="module"></script>
   </body>
 </html>

@@ -10,6 +10,9 @@ let menuItem = document.querySelectorAll(".nav_item");
 function openOrCloseBurger(event) {
   event.stopPropagation();
   let styleOfOverlay = getComputedStyle(overlay);
+  if(styleOfOverlay.zIndex === '4') {
+    return;
+  }
   if (
     !menu.classList.contains("burger-open") &&
     window.innerWidth <= 768 &&
