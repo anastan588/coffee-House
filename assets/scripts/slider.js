@@ -6,13 +6,13 @@ const arrowLeft = document.querySelector('.arrow_left');
 const arrowRight = document.querySelector('.arrow_right');
 
 const sliderButton = document.querySelectorAll('.inner_background');
-console.log(sliderButton);
+
 
 let sliderMeter = 0;
 let sliderPositon = 0;
 let touchStartX = 0;
 let touchEndX = 0;
-
+let prevArrow = '';
 let sliderStep;
 
 function setSliderStep() {
@@ -37,47 +37,68 @@ function setSliderStep() {
 setSliderStep();
 
 function moveSlideToleft(event) {
+  event.stopPropagation();
+
+  console.log('left');
+ 
+
   sliderButton[sliderMeter].classList.remove('slider_background');
   sliderButton[sliderMeter].classList.remove('animation_start');
   sliderButton[sliderMeter].classList.remove('slider_button_1');
-  event.stopPropagation();
-  if (sliderMeter < 2) {
+  if (event !== undefined) {
+    pauseSlideTransition();
+    sliderButton[sliderMeter].classList.remove('stop-animation');
+  }
+
+  if (sliderMeter !== 0 && (sliderPositon !== 0)) {
     sliderPositon = sliderPositon - sliderStep;
-    sliderMove.style.left = `${sliderPositon}px`;
-    console.log(sliderPositon);
-    sliderMeter = sliderMeter + 1;
+    sliderMove.style.left = `-${sliderPositon}px`;
+
+    sliderMeter = sliderMeter - 1;
     sliderButton[sliderMeter].classList.add('slider_background');
     sliderButton[sliderMeter].classList.add('animation_start');
-    console.log(sliderButton[sliderMeter]);
   } else {
-    sliderPositon = 0;
-    sliderMove.style.left = `${sliderPositon}px`;
-    sliderMeter = 0;
+    sliderPositon = 960;
+    sliderMove.style.left = `-${sliderPositon}px`;
+    sliderMeter = 2;
     sliderButton[sliderMeter].classList.add('slider_background');
     sliderButton[sliderMeter].classList.add('animation_start');
   }
+
   // arrowLeft.classList.add('pointer_events');
   // arrowRight.classList.add('pointer_events');
-  // setTimeout(()=> {
-
-  //     arrowLeft.classList.remove('pointer_events');
-  //     arrowRight.classList.remove('pointer_events');
-  // },2000)
+  setTimeout(() => {
+    if (event !== undefined) {
+      resumeSlideTransition();
+    }
+    // arrowLeft.classList.remove('pointer_events');
+    // arrowRight.classList.remove('pointer_events');
+  }, 2000);
+  prevArrow = 'left';
 }
 
 function moveSlideToRight(event) {
+  console.log('right');
+
+  
+  // event.stopPropagation()
   sliderButton[sliderMeter].classList.remove('slider_background');
   sliderButton[sliderMeter].classList.remove('animation_start');
   sliderButton[sliderMeter].classList.remove('slider_button_1');
-  //   event.stopPropagation();
+  if (event !== undefined) {
+    pauseSlideTransition();
+    sliderButton[sliderMeter].classList.remove('stop-animation');
+  }
+
   if (sliderMeter < 2) {
     sliderPositon = sliderPositon + sliderStep;
     sliderMove.style.left = `-${sliderPositon}px`;
-    console.log(sliderPositon);
+
+
     sliderMeter = sliderMeter + 1;
+
     sliderButton[sliderMeter].classList.add('slider_background');
     sliderButton[sliderMeter].classList.add('animation_start');
-    console.log(sliderButton[sliderMeter]);
   } else {
     sliderPositon = 0;
     sliderMove.style.left = `-${sliderPositon}px`;
@@ -88,25 +109,30 @@ function moveSlideToRight(event) {
   //   sliderMove.style.transition = 'left 0.5s ease-in-out';
   // arrowLeft.classList.add('pointer_events');
   // arrowRight.classList.add('pointer_events');
-  // setTimeout(()=> {
-  //     arrowLeft.classList.remove('pointer_events');
-  //     arrowRight.classList.remove('pointer_events');
-  // },2000)
+  setTimeout(() => {
+    if (event !== undefined) {
+      resumeSlideTransition();
+    }
+
+    // arrowLeft.classList.remove('pointer_events');
+    // arrowRight.classList.remove('pointer_events');
+  }, 4000);
+  prevArrow = 'left';
 }
 
 arrowLeft.addEventListener('click', (event) => {
-  console.log(event.target);
+
   moveSlideToleft(event);
 });
 
 arrowRight.addEventListener('click', (event) => {
-  console.log(event.target);
+
   moveSlideToRight(event);
 });
 
 sliderMove.addEventListener('touchstart', function (event) {
   touchStartX = event.touches[0].clientX;
-  console.log(touchStartX);
+
 });
 
 sliderMove.addEventListener('touchend', function (event) {
@@ -125,22 +151,21 @@ let slideInterval;
 let isPaused = false;
 
 // Function to start the slide transition
-function startSlideTransition() {
+function startSlideTransition(event) {
   slideInterval = setInterval(moveSlideToRight, 4000);
-  console.log(slideInterval);
+
 }
 
 // Function to pause the slide transition
-function pauseSlideTransition() {
-  console.log(isPaused);
+function pauseSlideTransition(event) {
+
   clearInterval(slideInterval);
   sliderButton[sliderMeter].classList.add('stop-animation');
   isPaused = true;
 }
 
 // Function to resume the slide transition
-function resumeSlideTransition() {
-  console.log(isPaused);
+function resumeSlideTransition(event) {
   if (isPaused) {
     startSlideTransition();
     sliderButton[sliderMeter].classList.remove('stop-animation');
@@ -148,11 +173,19 @@ function resumeSlideTransition() {
   }
 }
 
-sliderMove.addEventListener('mouseover', pauseSlideTransition);
+sliderMove.addEventListener('mouseover', (event) =>
+  pauseSlideTransition(event)
+);
 
-sliderMove.addEventListener('mouseout', resumeSlideTransition);
+sliderMove.addEventListener('mouseout', (event) =>
+  resumeSlideTransition(event)
+);
 
-sliderMove.addEventListener('touchstart', pauseSlideTransition);
-sliderMove.addEventListener('touchend', resumeSlideTransition);
+sliderMove.addEventListener('touchstart', (event) =>
+  pauseSlideTransition(event)
+);
+sliderMove.addEventListener('touchend', (event) =>
+  resumeSlideTransition(event)
+);
 
 startSlideTransition();
